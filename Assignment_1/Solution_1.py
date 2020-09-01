@@ -45,4 +45,4 @@ P2 = point(3,4,-2)
 P3 = point(0,3,2)
 P4 = point(3,5,6)
 
-print ("The lines through the given points are : {}".format(check(P1,P2,P3,P4)))
+print ("The two lines through the given four points are : {}".format(check(P1,P2,P3,P4)))
