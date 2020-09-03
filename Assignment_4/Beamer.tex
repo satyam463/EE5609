@@ -1,0 +1,218 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{siunitx}
+%\doublespacing
+\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+%\usepackage{iithtlc}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+%\usepackage{stmaryrd}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+\usepackage{amsmath}
+
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+
+\begin{document}
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+%\numberwithin{equation}{section}
+\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+\renewcommand{\thefigure}{\theproblem}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+%\counterwithin{equation}{enumi}
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Matrix Theory (EE5609) Assignment 4}
+\author{Arkadipta De\\MTech Artificial Intelligence\\AI20MTECH14002}
+
+\maketitle
+\newpage
+%\tableofcontents
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{abstract}
+This document solves an equation on matrix.
+\end{abstract}
+The code for the solution of this problem can be found at
+%
+\begin{lstlisting}
+https://github.com/Arko98/EE5609/blob/master/Assignment_4/Codes/Solution.py
+\end{lstlisting}
+%
+\section{Problem}
+If $\vec{A}$ = \myvec{1&0&2\\0&2&1\\2&0&3}, prove that $\vec{A^3}-6\vec{A^2}+7\vec{A}+2\vec{I}$=0
+\section{Solution}
+The equation in the problem can be modified as follows
+\begin{align}
+\vec{A^3}-6\vec{A^2}+7\vec{A}+2\vec{I}&=0\\
+\implies\vec{A^2}(\vec{A^}-6\vec{I})+7\vec{A}+2\vec{I}&=0\label{eq1}
+\end{align}
+So we need to prove equation \ref{eq1}. Now, at first we calculate the value of $\vec{A^2}$ as follows
+\begin{align}
+\vec{A^2}&=\vec{A}\cdot\vec{A}\\
+\implies\vec{A^2}&=\vec{A^T}\vec{A}\\
+\implies\vec{A^2}&=\myvec{1&0&2\\0&2&0\\2&1&3}\myvec{1&0&2\\0&2&1\\2&0&3}\\
+\implies\vec{A^2}&=\myvec{5&0&8\\2&4&5\\8&0&13}\label{eq2}
+\end{align}
+Next we calculate, $\vec{A}-6\vec{I}$ where I is identity matrix of order 3, as follows
+\begin{align}
+\vec{A}-6\vec{I}&=\myvec{1&0&2\\0&2&1\\2&0&3} - 6\myvec{1&0&0\\0&1&0\\0&0&1}\\
+\implies\vec{A}-6\vec{I}&=\myvec{1&0&2\\0&2&1\\2&0&3} - \myvec{6&0&0\\0&6&0\\0&0&6}\\
+\implies\vec{A}-6\vec{I}&=\myvec{-5&0&2\\0&-4&1\\2&0&-3}\label{eq3}
+\end{align}
+Now we compute $\vec{A^2}(\vec{A}-6\vec{I})$ by putting values of $\vec{A^2}$ from equation \ref{eq2} and value of $\vec{A}-6\vec{I}$ from \ref{eq3} as follows
+\begin{align}
+\vec{A^2}\cdot(\vec{A}-6\vec{I})&=\vec{(A^2)^T}(\vec{A}-6\vec{I})\\
+\implies\vec{A^2}\cdot(\vec{A}-6\vec{I})&=\myvec{5&2&8\\0&4&0\\8&5&13}\myvec{-5&0&2\\0&-4&1\\2&0&-3}\\
+\implies\vec{A^2}\cdot(\vec{A}-6\vec{I})&=\myvec{-9&0&-14\\0&-16&-7\\-14&0&-23}\label{eq4}
+\end{align}
+Next we compute $7\vec{A}+2\vec{I}$ as follows
+\begin{align}
+7\vec{A}+2\vec{I} &= 7\myvec{1&0&2\\0&2&1\\2&0&3}+2\myvec{1&0&0\\0&1&0\\0&0&1}\\
+\implies7\vec{A}+2\vec{I}&=\myvec{9&0&14\\0&16&7\\14&0&23}\label{eq5}
+\end{align}
+Now putting the value of $\vec{A^2}(\vec{A}-6\vec{I})$ from equation \ref{eq4} and value of $7\vec{A}+2\vec{I}$ from equation \ref{eq5} into the left hand side of equation \ref{eq1} we get
+\begin{align}\textwidth
+\vec{A^2}(\vec{A^}-6\vec{I})+7\vec{A}+2\vec{I}&=\myvec{0&0&0\\0&0&0\\0&0&0}\\
+\implies\vec{A^2}(\vec{A^}-6\vec{I})+7\vec{A}+2\vec{I}&=0\label{eqF}
+\end{align}
+Thus from equation \ref{eqF} we arrive at the right hand side of equation \ref{eq1}, Hence proved.
+\end{document}
