@@ -177,6 +177,16 @@ Similarly if $\vec{R_A_1}$ and $\vec{R_A_2}$ are first row and second row of the
 \vec{R_B_A_2} &= 3\vec{R_A_1}+4\vec{R_A_2}\label{eqAB4}
 \end{align}
 Clearly we can see from equations \ref{eqAB1} and \ref{eqAB3} that $\vec{R_A_B_1}\not=\vec{R_B_A_1}$ and from equations \ref{eqAB2} and \ref{eqAB4} that $\vec{R_A_B_2}\not=\vec{R_B_A_2}$. Hence matrix multiplication is generally not commutative.\\
+We can define a matrix multiplications $\vec{A}\vec{B}$ and $\vec{B}\vec{A}$ respectively as
+\begin{align}
+\vec{AB_i_j}=\vec{A_iB_j}=\sum_{k=1}^n a_{ki}b_{jk}\label{eqExp1}\\
+\vec{BA_i_j}=\vec{B_iA_j}=\sum_{k=1}^n b_{ki}a_{jk}\label{eqExp2}
+\end{align}
+where $\vec{A_i}$ is $i$th row of matrix $\vec{A}$ and $\vec{B_j}$ is $j$th row of matrix $\vec{B}$. Clearly, equations \eqref{eqExp1} and \eqref{eqExp2} are composition of addition and multiplication. Hence, matrix multiplication can be seen as linear composition of functions. Now for two functions $f$ and $g$, the composition of the two function is not commutative i.e 
+\begin{align}
+(f \circ g)(x) = f(g(x)) \not= g \circ f(x) = g(f(x))
+\end{align}
+Thus matrix multiplication which is actually a linear combination of functions is generally not commutative.
 \begin{comment}
 \textbf{Python Code: }The code for the solution can be found at \url{https://github.com/Arko98/EE5609/blob/master/Assignment_2/Codes/Figure.py}
 \end{comment}
