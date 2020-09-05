@@ -169,17 +169,21 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 
 \begin{abstract}
-This document solves an equation on matrix.
+This document solves an equation on matrix. Additionally it finds characteristic equation of a square matrix.
 \end{abstract}
+\begin{comment}
 The code for the solution of this problem can be found at
 %
 \begin{lstlisting}
 https://github.com/Arko98/EE5609/blob/master/Assignment_4/Codes/Solution.py
 \end{lstlisting}
 %
+\end{comment}
 \section{Problem}
 If $\vec{A}$ = \myvec{1&0&2\\0&2&1\\2&0&3}, prove that $\vec{A^3}-6\vec{A^2}+7\vec{A}+2\vec{I}$=0
 \section{Solution}
+The solution code for this problem can be found at: \url{https://github.com/Arko98/EE5609/blob/master/Assignment_4/Codes/Solution.py}
+\begin{comment}
 The equation in the problem can be modified as follows
 \begin{align}
 \vec{A^3}-6\vec{A^2}+7\vec{A}+2\vec{I}&=0\\
@@ -215,23 +219,24 @@ Now putting the value of $\vec{A^2}(\vec{A}-6\vec{I})$ from equation \ref{eq4} a
 \implies\vec{A^2}(\vec{A^}-6\vec{I})+7\vec{A}+2\vec{I}&=0\label{eqF}
 \end{align}
 Thus from equation \ref{eqF} we arrive at the right hand side of equation \ref{eq1}, Hence proved.
+\end{comment}
 \section{Problem 2}
 Find the characteristic equation of the matrix $\vec{A}$ = \myvec{1&0&2\\0&2&1\\2&0&3}
 \section{Solution}
 For a general order $k$ square matrix $\vec{A}$, the characteristic equation in variable $\lambda$ is defined by
 \begin{align}
-\det({A-\lambda I}) = 0\label{eqChar1}
+\det({\vec{A}-\lambda \vec{I}}) = 0\label{eqChar1}
 \end{align}
 where $\vec{I}$ is identity matrix of order $k$. Now we compute $\lambda \vec{I}$ as follows
 \begin{align}
 \lambda \vec{I} = \lambda \myvec{1&0&0\\0&1&0\\0&0&1}\\
 \implies\lambda \vec{I} = \myvec{\lambda &0&0\\0&\lambda &0\\0&0&\lambda}\\
-\implies\lambda\det{I} = \mydet{\lambda &0&0\\0&\lambda &0\\0&0&\lambda}\label{eqLamda}
+\implies\lambda\det{\vec{I}} = \mydet{\lambda &0&0\\0&\lambda &0\\0&0&\lambda}\label{eqLamda}
 \end{align}
 So in equation \ref{eqChar1}, putting the values from \ref{eqLamda} we get,
 \begin{align}
-\det({A-\lambda I}) &= 0\\
-\implies\det{A}-\lambda \det{I} &= 0\\
+\det({\vec{A}-\lambda \vec{I}}) &= 0\\
+\implies\det{\vec{A}}-\lambda \det{\vec{I}} &= 0\\
 \implies\mydet{1&0&2\\0&2&1\\2&0&3}-\mydet{\lambda &0&0\\0&\lambda &0\\0&0&\lambda } &= 0\\
 \implies\mydet{1-\lambda &0&2\\0&2-\lambda &1\\2&0& 3-\lambda} &= 0\label{eqFinal}
 \end{align}
