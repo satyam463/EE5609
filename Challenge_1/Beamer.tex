@@ -180,13 +180,13 @@ https://github.com/Arko98/EE5609/blob/master/Challenge_1/Codes/Figure.py
 \section{Problem}
 Find the points on two skew lines that are closest to each other in 3-Dimensions.
 \section{Explanation}
-Let, skew line, $\vec{L1}$ is passing through the point $A(a_1,b_1,c_1)$ with direction vector $(D_1(l_1,m_1,n_1)$ and skew line, $\vec{L2}$ is passing through the point $B(a_2,b_2,c_2)$  with direction vector $(D_2(l_2,m_2,n_2)$. The equations of skew lines are given by,
+Let, skew line, $\vec{L_1}$ is passing through the point $A(a_1,b_1,c_1)$ with direction vector $(D_1(l_1,m_1,n_1)$ and skew line, $\vec{L_2}$ is passing through the point $B(a_2,b_2,c_2)$  with direction vector $(D_2(l_2,m_2,n_2)$. The equations of skew lines are given by,
 \begin{align}
-\vec{L1}: \vec{r_1}&=A+k_1(\vec{D_1})\label{eq1}\\
-\vec{L2}: \vec{r_2}&=B+k_2(\vec{D_2})\label{eq2}
+\vec{L_1}: \vec{r_1}&=A+k_1(\vec{D_1})\label{eq1}\\
+\vec{L_2}: \vec{r_2}&=B+k_2(\vec{D_2})\label{eq2}
 \end{align}
-Where $r_1=\myvec{x_1\\y_1\\z_1}$ and $r_2=\myvec{x_2\\ y_2\\z_2}$ be two arbitrary points on skew lines $\vec{L1}$ and $\vec{L2}$, respectively. \\
-Let, the closest points on skew lines $\vec{L1}$ and $\vec{L2}$ be $\vec{P}$ and $\vec{Q}$, respectively. Hence $\vec{P}$ and $\vec{Q}$ can be expressed in terms of equation \eqref{eq1} and \eqref{eq2},
+Where $r_1=\myvec{x_1\\y_1\\z_1}$ and $r_2=\myvec{x_2\\ y_2\\z_2}$ be two arbitrary points on skew lines $\vec{L_1}$ and $\vec{L_2}$, respectively. \\
+Let, the closest points on skew lines $\vec{L_1}$ and $\vec{L_2}$ be $\vec{P}$ and $\vec{Q}$, respectively. Hence $\vec{P}$ and $\vec{Q}$ can be expressed in terms of equation \eqref{eq1} and \eqref{eq2},
 \begin{align}
 \vec{P}=\myvec{a_1+k_1l_1\\b_1+k_1m_1\\c_1+k_1n_1}\label{eq3}\\
 \vec{Q}=\myvec{a_2+k_2l_2\\b_2+k_2m_2\\c_2+k_2n_2}\label{eq4}
@@ -196,7 +196,7 @@ So, the position vector from $\vec{P}$ to $\vec{Q}$ i.e $\vec{Q-P}$ is given by,
 \vec{(Q-P)}=\myvec{a_2+k_2l_2-(a_1+k_1l_1)\\b_2+k_2m_2-(b_1+k_1m_1)\\
 c_2+k_2n_2-(c_1+k_1n_1)}\label{eq5}
 \end{align}
-Since the points $\vec{P}$ and $\vec{Q}$ are closest points, position vector $\vec{PQ}$ will be perpendicular to both the skew lines $\vec{L1}$ and $\vec{L2}$ or will be perpendicular to both the direction vectors $\vec{D_1}$ and $\vec{D_2}$.\\ 
+Since the points $\vec{P}$ and $\vec{Q}$ are closest points, position vector $\vec{PQ}$ will be perpendicular to both the skew lines $\vec{L_1}$ and $\vec{L_2}$ or will be perpendicular to both the direction vectors $\vec{D_1}$ and $\vec{D_2}$.\\ 
 Therefore,
 \begin{align}
 \vec{(Q-P)}\cdot\vec{D_1}&=0\\
@@ -212,10 +212,10 @@ By solving equations \ref{eq6} and \ref{eq7} we will get $k_1$ and $k_2$. Substi
 \section{solution}
 Let us illustrate the above approach using an example. Let, the equations of skew lines are given by,
 \begin{align}
-\vec{L1}: \vec{r_1}&=\myvec{1\\2\\3}+k_1\myvec{1\\-3\\2}\label{eqL1}\\
-\vec{L2}: \vec{r_2}&=\myvec{4\\5\\6}+k_2\myvec{2\\3\\1}\label{eqL2}
+\vec{L_1}: \vec{r_1}&=\myvec{1\\2\\3}+k_1\myvec{1\\-3\\2}\label{eqL1}\\
+\vec{L_2}: \vec{r_2}&=\myvec{4\\5\\6}+k_2\myvec{2\\3\\1}\label{eqL2}
 \end{align} 
-So, if $\vec{P}$ and $\vec{Q}$ are the points on the skew lines $\vec{L1}$ and $\vec{L2}$, then from equation \ref{eq5} the position vector $\vec{Q-P}$ is given by,
+So, if $\vec{P}$ and $\vec{Q}$ are the points on the skew lines $\vec{L_1}$ and $\vec{L_2}$, then from equation \ref{eq5} the position vector $\vec{Q-P}$ is given by,
 \begin{align}
 \vec{Q-P}&=\myvec{4+2k_2-(1+k_1)\\5+3k_2-(2-3k_1)\\6+k_2-(3+2k_1)}\\
 \implies\vec{Q-P}&=\myvec{-k_1+2k_2+3\\3k_1+3k_2+3\\-2k_1+k_2+3}
