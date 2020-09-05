@@ -235,8 +235,10 @@ So in equation \ref{eqChar1}, putting the values from \ref{eqLamda} we get,
 \implies\mydet{1&0&2\\0&2&1\\2&0&3}-\mydet{\lambda &0&0\\0&\lambda &0\\0&0&\lambda } &= 0\\
 \implies\mydet{1-\lambda &0&2\\0&2-\lambda &1\\2&0& 3-\lambda} &= 0\label{eqFinal}
 \end{align}
-Hence, equation \ref{eqFinal} is the required characteristic equation of matrix $\vec{A}$.
+Hence, equation \ref{eqFinal} is the required characteristic equation of matrix $\vec{A}$. Further expanding the determinant from the equation \ref{eqFinal} we get the following polynomial equation of $\lambda$ 
+\begin{align}
+(1-\lambda )((2-\lambda)(3-\lambda)-1)-4(2-\lambda) &= 0\\
+\implies\lambda^3-6\lambda^2+6\lambda+3 &=0\label{eqpol}
+\end{align}
+Hence, equation \ref{eqpol} is the required characteristic equation of matrix $\vec{A}$ for $\lambda$.
 \end{document}
-
-
-%\implies\mydet{1&0&2\\0&2&1\\2&0&3}-\mydet{\lambda &0&0\\0&\lambda &0\\0&0&\lambda } = 0\\
