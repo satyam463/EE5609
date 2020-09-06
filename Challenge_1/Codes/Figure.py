@@ -24,13 +24,14 @@ x_pq = np.array([29/19,20/19])
 y_pq = np.array([8/19,11/19])
 z_pq = np.array([77/19,86/19])
 
-ax.text(x_pq[0], y_pq[0], z_pq[0], "P")
-ax.text(x_pq[1], y_pq[1], z_pq[1], "Q")
+ax.text(x_pq[0], y_pq[0], z_pq[0], "P(1.52,0.42,4.05)")
+ax.text(x_pq[1], y_pq[1], z_pq[1], "Q(1.05,0.57,4.52)")
 
 ax.set_xlabel('X-axis')
 ax.set_ylabel('Y-axis')
 ax.set_zlabel('Z-axis')
 
 ax.scatter(x_pq,y_pq,z_pq, c = "green")
+ax.plot(x_pq,y_pq,z_pq,c="green")
 
 plt.show()
