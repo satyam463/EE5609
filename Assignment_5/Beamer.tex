@@ -70,6 +70,11 @@
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
 \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
 
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
@@ -180,20 +185,26 @@ https://github.com/Arko98/EE5609/blob/master/Assignment_5/Codes/Figure.py
 %
 
 \section{Problem}
-Show that the points  $\vec{A}$ = \myvec{a&b+c}, $\vec{B}$ = \myvec{b&c+a} and $\vec{C}$ = \myvec{c&a+b} are colinear.
-
+Show that the points  $\vec{A}$ = \myvec{a&b+c}, $\vec{B}$ = \myvec{b&c+a} and $\vec{C}$ = \myvec{c&a+b} are collinear.
 \section{Solution}
 The equation of the line formed by $\vec{A}$ and $\vec{B}$ i.e $\vec{BA}$ and line formed by $\vec{B}$ and $\vec{C}$ i.e $\vec{CB}$ is given by
 \begin{align}
-\vec{BA}: \vec{r_1} &= \myvec{a\\b+c}+\lambda_1\m\myvec{a-b\\b-a}\\
-\vec{CB}: \vec{r_2} &= \myvec{b\\c+a}+\lambda_2\m\myvec{c-b\\b-c}
+\vec{BA}: \vec{r_1} &= \myvec{a\\b+c}+\lambda_1\myvec{a-b\\b-a}\label{eq1}\\
+\vec{CB}: \vec{r_2} &= \myvec{b\\c+a}+\lambda_2\myvec{c-b\\b-c}\label{eq2}
 \end{align}
-Now if the three points are colinear, then the direction vectors of the two lines $\vec{BA}$ and $\vec{CB}$ must be linearly dependant i.e their determinant will be 0. Writing the determinant consisting of the direction vectors of lines we get,
+So if the three points are collinear then there exists no such non zero $\lambda_1$ and $\lambda_2$ such that \eqref{eq1} and \eqref{eq2} are equal,
 \begin{align}
-\mydet{a-b&c-b\\b-a&b-c} &= \mydet{a-b&c-b\\0&0} \qquad[R_2 = R_1+R_2]\\
-&= 0\label{eqFinal}
+\myvec{a\\b+c}+\lambda_1\myvec{a-b\\b-a} &= \myvec{b\\c+a}+\lambda_2\myvec{c-b\\b-c}\\
+\implies\lambda_1\myvec{a-b\\b-a} - \lambda_2\myvec{c-b\\b-c} & = \myvec{b\\c+a} - \myvec{a\\b+c}\\
+\implies\myvec{a-b&c-b\\b-a&b-c}\myvec{\lambda_1\\\lambda_2} & = \myvec{b-a\\a-b}\label{eqaug}
 \end{align}
-Hence, from \eqref{eqFinal} proved that, $\vec{A}$,$\vec{B}$ and $\vec{C}$ are colinear.
+Hence the augmented matrix from \eqref{eqaug} will be, 
+\begin{align}
+\begin{amatrix}{2}{a-b & c-b & b-a\\b-a & b-c & a-b}\end{amatrix}\\
+\intertext{Using row reduction we get,}
+\begin{amatrix}{2}{a-b & c-b & b-a\\b-a & b-c & a-b}\end{amatrix}\\\underleftrightarrow{R_2=R_2-R_1}\begin{amatrix}{2}a-b & c-b & b-a\\0&0&0\end{amatrix}
+\end{align}
+Hence, $\vec{A}$,$\vec{B}$ and $\vec{C}$ are colinear.
 \section{Example}
 We illustrate the concept by an example. Let $a$=1, $b$=2 and $c$=3. The points are $\vec{A}$=\myvec{1&5},$\vec{B}$=\myvec{2&4} and $\vec{C}$=\myvec{3&3}. Below is the diagram of the line passing through the points $\vec{A}$, $\vec{B}$ and $\vec{C}$.
 \renewcommand{\thefigure}{\arabic{figure}}
