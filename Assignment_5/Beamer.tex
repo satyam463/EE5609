@@ -196,11 +196,12 @@ So the augmented matrix of \eqref{eq1} is given by
 \begin{align}
 \myvec{a&b+c&1\\b&c+a&1\\c&a+b&1}\\
 \intertext{Using row reduction we get,}
-\myvec{a&b+c&1\\b&c+a&1\\c&a+b&1}\\\underleftrightarrow{R_2=R_2-\frac{b}{a}R_1}\myvec{1&\frac{b+c}{a}&\frac{1}{a}\\0&\frac{(a-b)(a+b+c)}{a}&\frac{a-b}{a}\\c&a+b&1}\\
-\underleftrightarrow{R_3=R_3-cR_1}\myvec{1&\frac{b+c}{a}&\frac{1}{a}\\0&\frac{(a-b)(a+b+c)}{a}&\frac{a-b}{a}\\0&\frac{(a-c)(a+b+c)}{a}&\frac{a-c}{a}}\\
-\underleftrightarrow{R_2=\frac{a}{(a-b)(a+b+c)}R_2}\myvec{1&\frac{b+c}{a}&\frac{1}{a}\\0&1&\frac{1}{a+b+c}\\0&\frac{(a-c)(a+b+c)}{a}&\frac{a-c}{a}}\\
-\underleftrightarrow{R_1=R_1-\frac{b+c}{a}R_2}\myvec{1&0&\frac{1}{a+b+c}\\0&1&\frac{1}{a+b+c}\\0&\frac{(a-c)(a+b+c)}{a}&\frac{a-c}{a}}\\
-\underleftrightarrow{R_3=R_3-\frac{(a-b)(a+b+c)}{a}R_2}\myvec{1&0&\frac{1}{a+b+c}\\0&1&\frac{1}{a+b+c}\\0&0&0}\label{eqFinal}
+\myvec{a&b+c&1\\b&c+a&1\\c&a+b&1}\\\underleftrightarrow{R_3=cR_3-bR_2}\myvec{a&b+c&1\\b&c+a&1\\0&(b-c)(a+b+c)&b-c}\\
+\underleftrightarrow{R_3=\frac{1}{(b-c)}R_3}\myvec{a&b+c&1\\b&c+a&1\\0&a+b+c&1}\\
+\underleftrightarrow{R_2=aR_2-bR_1}\myvec{a&b+c&1\\0&(a-b)(a+b+c)&a-b\\0&a+b+c&1}\\
+\underleftrightarrow{R_2=\frac{1}{(a-b)}R_2}\myvec{a&b+c&1\\0&a+b+c&1\\0&a+b+c&1}\\
+\underleftrightarrow{R_3=R_3-R_2}\myvec{a&b+c&1\\0&a+b+c&1\\0&0&0}\\
+\label{eqFinal}
 \end{align}
 From \eqref{eqFinal} we see that the rank of the augmented matrix is less than 3, hence $\vec{A}$,$\vec{B}$ and $\vec{C}$ are colinear.
 \section{Example}
