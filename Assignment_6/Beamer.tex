@@ -174,7 +174,7 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 
 \begin{abstract}
-This document proves the co-linearity of three points in X-Y plane.
+This proves a theorem on triangle.
 \end{abstract}
 
 All the codes for the figure in this document can be found at
@@ -202,10 +202,34 @@ In $\triangle{ABC}$, $\vec{M}$ is midpoint of $\vec{AB}$ and $\vec{MD}$ is paral
 &\vec{M} = \frac{\vec{A}+\vec{B}}{2}\label{eq1}\\
 &\vec{MD} \parallel \vec{BC}\label{eq2}
 \end{align}
-As line drawn through mid point of one side of triangle parallel to other side bisects third side, hence proved from \eqref{eq1} and \eqref{eq2}, $\vec{D}$ is midpoint of $\vec{A}$ and $\vec{C}$ i.e
+Let $\vec{m_M_D}$ and $\vec{m_B_C}$ are direction vectors of $\vec{MD}$ and $\vec{BC}$ respectively. Then,
+\begin{align}
+\vec{m_M_D} &= \vec{M} - \vec{D} = \frac{\vec{A}+\vec{B}}{2} - \vec{D}\\
+\vec{m_B_C} &= \vec{B} - \vec{C}
+\end{align}
+Now from \eqref{eq2} we get,
+\begin{align}
+\vec{m_M_D} &= k\vec{m_B_C}\\
+\implies\frac{\vec{A}+\vec{B}}{2} - \vec{D} &= k(\vec{B} - \vec{C})\label{eqNew1}
+\end{align}
+Let $\vec{D}$ = $\frac{m\vec{A}+\vec{C}}{m+1}$, then from \eqref{eqNew1} we get,
+\begin{align}
+\frac{\vec{A}+\vec{B}}{2} - \frac{m\vec{A}+\vec{C}}{m+1} = k(\vec{B} - \vec{C})
+\end{align}
+\begin{align}
+\implies(\frac{1}{2}-\frac{m}{m+1})\vec{A}+(\frac{1}{2}-k)\vec{B}+(k-\frac{1}{m+1})\vec{C} =0
+\end{align}
+Since $\vec{A}$, $\vec{B}$ and $\vec{C}$ are linearly dependent as they form $\triangle{ABC}$ then 
+\begin{align}
+\frac{1}{2}-\frac{m}{m+1} &= 0\label{solve1}\\
+\frac{1}{2}-k & = 0\label{solve2}\\
+k-\frac{1}{m+1} &= 0\label{solve3}
+\end{align}
+Solving \eqref{solve1}, \eqref{solve2} and \eqref{solve3} we get $k=\frac{1}{2}$ and $m = 1$. Hence, substituting value of $m$ in $\vec{D}$ we get,
 \begin{align}
 &\vec{D} = \frac{\vec{A}+\vec{C}}{2}\label{eq3}
 \end{align}
+Hence Proved.\\
 From figure \ref{myfig}, direction vectors of $\vec{MD}$ and  $\vec{AC}$ are given by,
 \begin{align}
 \vec{m_M_D} &= \vec{M}-\vec{D}\\
@@ -213,17 +237,18 @@ From figure \ref{myfig}, direction vectors of $\vec{MD}$ and  $\vec{AC}$ are giv
 \implies\vec{m_M_D}&=\frac{\vec{B}-\vec{C}}{2}\\ 
 \vec{m_A_C} &= \vec{A}-\vec{C} 
 \intertext{Hence,}
-\vec{m_M_D}\vec{m_A_C} &=(\frac{\vec{B}-\vec{C}}{2})(\vec{A}-\vec{C})\\
-\implies\vec{m_M_D}\vec{m_A_C} &=(\frac{\vec{m_B_C}}{2})(\vec{m_A_C})\\
-\implies\vec{m_M_D}\vec{m_A_C}&=0\label{eq4}\quad{[$\because\vec{BC}\perp\vec{AC}$, $\angle{BCA}=90^{\circ}$]}
+\vec{m_M_D^T}\vec{m_A_C} &=(\frac{\vec{B}-\vec{C}}{2})(\vec{A}-\vec{C})\\
+\implies\vec{m_M_D^T}\vec{m_A_C} &=(\frac{\vec{m_B_C}}{2})(\vec{m_A_C})\\
+\implies\vec{m_M_D^T}\vec{m_A_C}&=0\label{eq4}\quad{[$\because\vec{BC}\perp\vec{AC}$, $\angle{BCA}=90^{\circ}$]}
 \end{align}
 From \eqref{eq4}, it is proved that $\vec{MD}\perp\vec{AC}$\\
-If $\vec{m_C_M}$, $\vec{m_C_D}$, $\vec{m_D_M}$, $\vec{m_A_D}$, $\vec{m_A_M}$ and $\vec{m_A_B}$ are direction vectors of $\vec{CM}$, $\vec{CD}$, $\vec{DM}$, $\vec{AD}$, $\vec{AM}$ and $\vec{AB}$ respectively then from the figure \ref{myfig}, after joining $\vec{M}$ and $\vec{C}$, in $\triangle{AMD}$ and $\triangle{CMD}$ we get,
+Again we get,
 \begin{align}
-\vec{m_C_M} &= \vec{m_C_D}+\vec{m_D_M}\quad\text{[From $\triangle{CDM}]$}\\
-\implies\vec{m_C_M} &= \vec{m_A_D}+\vec{m_D_M}\quad\text{[Proved in \eqref{eq3}]}\\
-\implies\vec{m_C_M} &= \vec{m_A_M}\quad\text{[From $\triangle{ADM}$]}\\
-\implies\vec{m_C_M} &= \vec{m_A_M} = \frac{\vec{m_A_B}}{2}\label{eqFinal}\quad\text{[From \eqref{eq1}]}
+\vec{C-M} &= \vec{C - D}+\vec{D - M}\\
+\implies\vec{C-M} &= \vec{A - D}+\vec{D - M}\quad\text{[From \eqref{eq3}]}\\
+\implies\vec{C - M} &= \vec{A - M}\label{eqFin1}\\
+\implies\vec{C - M} &= \vec{A} - \vec{\frac{\vec{A}+\vec{B}}{2}}\qquad\text{[From \eqref{eq1}]}\\
+\implies\vec{C - M} &= \frac{1}{2}(\vec{A-B})\label{eqFin2}
 \end{align}
-Hence proved, $\vec{CM}$ = $\vec{MA}$ = $\frac{1}{2}$ $\vec{AB}$
+Hence from \eqref{eqFin1} and \eqref{eqFin2} proved,\\ $\vec{CM}$ = $\vec{MA}$ = $\frac{1}{2}$ $\vec{AB}$
 \end{document}
