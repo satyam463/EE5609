@@ -217,7 +217,7 @@ Let $\vec{D}$ = $\frac{m\vec{A}+\vec{C}}{m+1}$, then from \eqref{eqNew1} we get,
 \frac{\vec{A}+\vec{B}}{2} - \frac{m\vec{A}+\vec{C}}{m+1} = k(\vec{B} - \vec{C})
 \end{align}
 \begin{align}
-\implies(\frac{1}{2}-\frac{m}{m+1})\vec{A}+(\frac{1}{2}-k)\vec{B}+(k-\frac{1}{m+1})\vec{C} =0
+\implies\brak{\frac{1}{2}-\frac{m}{m+1}}\vec{A}+\brak{\frac{1}{2}-k}\vec{B}+\brak{k-\frac{1}{m+1}}\vec{C} =0
 \end{align}
 Since $\vec{A}$, $\vec{B}$ and $\vec{C}$ are linearly dependent as they form $\triangle{ABC}$ then 
 \begin{align}
@@ -230,16 +230,11 @@ Solving \eqref{solve1}, \eqref{solve2} and \eqref{solve3} we get $k=\frac{1}{2}$
 &\vec{D} = \frac{\vec{A}+\vec{C}}{2}\label{eq3}
 \end{align}
 Hence Proved.\\
-From figure \ref{myfig}, direction vectors of $\vec{MD}$ and  $\vec{AC}$ are given by,
+From figure \ref{myfig},
 \begin{align}
-\vec{m_M_D} &= \vec{M}-\vec{D}\\
-\implies\vec{m_M_D} &=\frac{\vec{A}+\vec{B}}{2} - \frac{\vec{A}+\vec{C}}{2}\\
-\implies\vec{m_M_D}&=\frac{\vec{B}-\vec{C}}{2}\\ 
-\vec{m_A_C} &= \vec{A}-\vec{C} 
-\intertext{Hence,}
-\vec{m_M_D^T}\vec{m_A_C} &=(\frac{\vec{B}-\vec{C}}{2})(\vec{A}-\vec{C})\\
-\implies\vec{m_M_D^T}\vec{m_A_C} &=(\frac{\vec{m_B_C}}{2})(\vec{m_A_C})\\
-\implies\vec{m_M_D^T}\vec{m_A_C}&=0\label{eq4}\quad{[$\because\vec{BC}\perp\vec{AC}$, $\angle{BCA}=90^{\circ}$]}
+(\vec{M}-\vec{D})(\vec{A}-\vec{D}) &=\brak{\frac{\vec{A}+\vec{B}}{2} - \frac{\vec{A}+\vec{C}}{2}}(\vec{A}-\vec{C})\\
+\implies(\vec{M}-\vec{D})(\vec{A}-\vec{D}) &=\frac{1}{2}\brak{\vec{B}-\vec{C}}(\vec{A}-\vec{C})\\
+\implies(\vec{M}-\vec{D})(\vec{A}-\vec{D}) &=0\label{eq4}\quad{[$\because\vec{BC}\perp\vec{AC}$]}
 \end{align}
 From \eqref{eq4}, it is proved that $\vec{MD}\perp\vec{AC}$\\
 Again we get,
@@ -248,7 +243,8 @@ Again we get,
 \implies\vec{C-M} &= \vec{A - D}+\vec{D - M}\quad\text{[From \eqref{eq3}]}\\
 \implies\vec{C - M} &= \vec{A - M}\label{eqFin1}\\
 \implies\vec{C - M} &= \vec{A} - \vec{\frac{\vec{A}+\vec{B}}{2}}\qquad\text{[From \eqref{eq1}]}\\
-\implies\vec{C - M} &= \frac{1}{2}(\vec{A-B})\label{eqFin2}
+\implies\vec{C - M} &= \frac{1}{2}(\vec{A-B})\\
+\implies\norm{\vec{C - M}} &= \frac{1}{2}\norm{\vec{A-B}}\label{eqFin2}
 \end{align}
 Hence from \eqref{eqFin1} and \eqref{eqFin2} proved,\\ $\vec{CM}$ = $\vec{MA}$ = $\frac{1}{2}$ $\vec{AB}$
 \end{document}
