@@ -183,11 +183,11 @@ https://github.com/Arko98/EE5609/blob/master/Assignment_6
 \end{lstlisting}
 
 \section{Problem}
-$\triangle{ABC}$ is a triangle right angled at $\vec{C}$. A line through the mid-point $\vec{M}$ of hypotenuse $\vec{AB}$ and parallel to $\vec{BC}$ intersects $\vec{AC}$ at $\vec{D}$. Show that -
+$\triangle{ABC}$ is a triangle right angled at $\vec{C}$. A line through the mid-point $\vec{M}$ of hypotenuse AB and parallel to BC intersects AC at $\vec{D}$. Show that -
 \begin{itemize}
-\item[(i)] $\vec{D}$ is the mid-point of $\vec{AC}$ 
-\item[(ii)] $\vec{MD}$ $\perp$ $\vec{AC}$   
-\item[(iii)] $\vec{CM}$ = $\vec{MA}$ = $\frac{1}{2}$ $\vec{AB}$
+\item[(i)] $\vec{D}$ is the mid-point of AC 
+\item[(ii)] MD $\perp$ AC   
+\item[(iii)] CM = MA = $\frac{1}{2}$ AB
 \end{itemize}
 \section{Solution}
 \renewcommand{\thefigure}{1}
@@ -197,19 +197,19 @@ $\triangle{ABC}$ is a triangle right angled at $\vec{C}$. A line through the mid
 \caption{Right Angled Triangle by Latex-Tikz}
 \label{myfig}
 \end{figure}
-In $\triangle{ABC}$, $\vec{M}$ is midpoint of $\vec{AB}$ and $\vec{MD}$ is parallel to $\vec{BC}$, hence,
+In $\triangle{ABC}$, $\vec{M}$ is midpoint of AB and MD is parallel to BC, hence,
 \begin{align}
 &\vec{M} = \frac{\vec{A}+\vec{B}}{2}\label{eq1}\\
-&\vec{MD} \parallel \vec{BC}\label{eq2}
+&MD \parallel BC\label{eq2}
 \end{align}
-Let $\vec{m_M_D}$ and $\vec{m_B_C}$ are direction vectors of $\vec{MD}$ and $\vec{BC}$ respectively. Then,
+Let $\vec{m_M_D}$ and $\vec{m_B_C}$ are direction vectors of MD and BC respectively. Then,
 \begin{align}
-\vec{m_M_D} &= \vec{M} - \vec{D} = \frac{\vec{A}+\vec{B}}{2} - \vec{D}\\
-\vec{m_B_C} &= \vec{B} - \vec{C}
+\vec{m}_{MD} &= \vec{M} - \vec{D} = \frac{\vec{A}+\vec{B}}{2} - \vec{D}\\
+\vec{m}_{BC} &= \vec{B} - \vec{C}
 \end{align}
 Now from \eqref{eq2} we get,
 \begin{align}
-\vec{m_M_D} &= k\vec{m_B_C}\\
+\vec{m}_{MD} &= k\vec{m}_{BC}\\
 \implies\frac{\vec{A}+\vec{B}}{2} - \vec{D} &= k(\vec{B} - \vec{C})\label{eqNew1}
 \end{align}
 Let $\vec{D}$ = $\frac{m\vec{A}+\vec{C}}{m+1}$, then from \eqref{eqNew1} we get,
@@ -234,9 +234,9 @@ From figure \ref{myfig},
 \begin{align}
 (\vec{M}-\vec{D})(\vec{A}-\vec{D}) &=\brak{\frac{\vec{A}+\vec{B}}{2} - \frac{\vec{A}+\vec{C}}{2}}(\vec{A}-\vec{C})\\
 \implies(\vec{M}-\vec{D})(\vec{A}-\vec{D}) &=\frac{1}{2}\brak{\vec{B}-\vec{C}}(\vec{A}-\vec{C})\\
-\implies(\vec{M}-\vec{D})(\vec{A}-\vec{D}) &=0\label{eq4}\quad{[$\because\vec{BC}\perp\vec{AC}$]}
+\implies(\vec{M}-\vec{D})(\vec{A}-\vec{D}) &=0\label{eq4}\quad{[$\because$ BC$\perp$AC]}
 \end{align}
-From \eqref{eq4}, it is proved that $\vec{MD}\perp\vec{AC}$\\
+From \eqref{eq4}, it is proved that MD$\perp$AC\\
 Again we get,
 \begin{align}
 \vec{C-M} &= \vec{C - D}+\vec{D - M}\\
@@ -246,5 +246,5 @@ Again we get,
 \implies\vec{C - M} &= \frac{1}{2}(\vec{A-B})\\
 \implies\norm{\vec{C - M}} &= \frac{1}{2}\norm{\vec{A-B}}\label{eqFin2}
 \end{align}
-Hence from \eqref{eqFin1} and \eqref{eqFin2} proved,\\ $\vec{CM}$ = $\vec{MA}$ = $\frac{1}{2}$ $\vec{AB}$
+Hence from \eqref{eqFin1} and \eqref{eqFin2} proved,\\CM = MA = $\frac{1}{2}$ AB
 \end{document}
