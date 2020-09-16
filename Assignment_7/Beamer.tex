@@ -222,6 +222,7 @@ Comparing coefficients of \eqref{eq4} with \eqref{eq1} we get,
 \vec{u} &= \myvec{-\frac{11}{2}\\\frac{43}{2}}\\
 f &= -35
 \end{align}
+
 From \eqref{eq3} the given second degree equation \eqref{eq4} will represent a pair of straight line if, 
 \begin{align}
 \mydet{6&\frac{1}{2}&-\frac{11}{2}\\ \frac{1}{2}&k&\frac{43}{2}\\-\frac{11}{2}& \frac{43}{2}&-35}&=0\\
@@ -229,7 +230,48 @@ From \eqref{eq3} the given second degree equation \eqref{eq4} will represent a p
 k+12&=0\\
 \implies k&=-12\label{eq5}
 \end{align}
-Hence, from \eqref{eq5} we find that for $k=-12$, the given second degree equation \eqref{eq4} represents pair of straight lines.\\ The figure below corresponds to the pair of straight lines represented by \eqref{eq4} when $k=-12$.
+Hence, from \eqref{eq5} we find that for $k=-12$, the given second degree equation \eqref{eq4} represents pair of straight lines. For the appropriate value of $k$, \eqref{eq4} becomes,
+\begin{align}
+6x^2 +xy-12y^2-11x+43y-35 = 0\label{eqmain}
+\end{align}
+
+\section{Graphical Illustration}
+We obtain the linear equation of the form ($ax + by + c$) from \eqref{eqmain} by considering
+\begin{align}
+6x^2 + xy - 12y^2 &= 6x^2 - 8xy + 9xy - 12y^2\\
+&= 2x(3x - 4y) + 3y(3x - 4y)\\
+&= (3x - 4y)(2x + 3y) \label{eqmain2}
+\end{align}
+Again \eqref{eqmain} can be written using \eqref{eqmain2} as,
+\begin{align}
+(3x-4y+m)(2x+3y+n)&=0 \label{eqSubs} \\
+\implies 6x^2+ xy-12y^2+(2m+3n)x\nonumber\\+(3m-4n)y+mn &= 0 \label{eqmain3}
+\end{align}
+Equating coefficients of \eqref{eq4} and \eqref{eqmain3},
+\begin{align}
+2m+3n &= -11\\
+3m-4n &= 43
+\intertext{The equations can be written as follows,}
+\myvec{2&3\\3&-4}\myvec{m\\n}&=\myvec{-11\\43}\label{eqmain4}
+\end{align}
+The augmented matrix of \eqref{eqmain4} is,
+\begin{align}
+\myvec{2&3&-11\\3&-4&43}\underleftrightarrow{R_1=\frac{1}{2}R_1}\myvec{1&\frac{3}{2}&-\frac{11}{2}\\3&-4&43}\\
+\underleftrightarrow{R_2=R_2-3R_1}\myvec{1&\frac{3}{2}&-\frac{11}{2}\\0&-\frac{17}{2}&\frac{119}{2}}\\
+\underleftrightarrow{R_2=-\frac{2}{17}R_2}\myvec{1&\frac{3}{2}&-\frac{11}{2}\\0&1&-7}\\
+\underleftrightarrow{R_1=R_1-\frac{3}{2}R_2}\myvec{1&0&5\\0&1&-7}\\
+\end{align}
+Hence we get,
+\begin{align}
+	m &= 5 \label{eqsol1} \\
+	n &= -7 \label{eqsol2}
+\end{align}
+Substituting \eqref{eqsol1} and \eqref{eqsol2} in \eqref{eqSubs}, we obtain
+\begin{align}
+	(3x - 4y + 5)(2x + 3y - 7) = 0 \label{eqfinal}
+\end{align}
+Hence \eqref{eqfinal} represents equation of a pair of straight lines.\\
+The figure below corresponds to the pair of straight lines represented by \eqref{eqfinal}.
 \renewcommand{\thefigure}{1}
 \begin{figure}[h!]
 \centering
