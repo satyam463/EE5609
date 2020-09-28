@@ -188,10 +188,18 @@ https://github.com/Arko98/EE5609/blob/master/Assignment_11
 \section{\textbf{Problem}}
 Prove that, each field of the characteristic zero contains a copy of the rational number field.
 \section{\textbf{Solution}}
-Let $F$ be a field of characteristic zero. Hence
+The characteristic of a field is defined to be the smallest number of times one must use the field's multiplicative identity (1) in a sum to get the additive identity. If this sum never reaches the additive identity (0), then the field is said to have characteristic zero. That is, the characteristic of a field is the smallest positive number $n$ such that, addition of $n$ times the multiplicative identity (1) is the additive identity (1) i.e
 \begin{align}
-0 \in F\\
-1 \in F
+1+1+\dots+1 = 0
+\end{align}
+If such $n$ does not exist, then the characteristic of the field is 0. Moreover for such field having 0 characteristic,
+\begin{align}
+    1 \not= 1+1 \not= 1+1+\dots \not= 0
+\end{align}
+Now, let $F$ be a field of characteristic zero. Hence
+\begin{align}
+0 &\in F \qquad{\text{[Additive Identity]}}\\
+1 &\in F \qquad{\text{[Multiplicative Identity]}}
 \end{align}
 Since the characteristic of $F$ is zero hence,
 \begin{align}
