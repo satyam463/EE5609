@@ -207,25 +207,17 @@ Hence proved, every pair $(x_1,x_2)$ is a solution for the equation $\vec{AX}$ =
 \subsection{Solution 2}
 Given $ad-bc \not=$ 0, we can perform row reduction on the augmented matrix of equation $\vec{AX}$=0 as follows,
 \begin{align}
-\myvec{a&b&x_1\\c&d&x_2}&\xleftrightarrow{R_1 = \frac{1}{a}R_1}\myvec{1&\frac{b}{a}&\frac{x_1}{a}\\c&d&x_2}\\
-&\xleftrightarrow{R_2 = R_2-cR_1}\myvec{1&\frac{b}{a}&\frac{x_1}{a}\\0&\frac{ad-bc}{a}&\frac{ax_2-cx_1}{a}}\\
-&\xleftrightarrow{R_2=\frac{a}{ad-bc}R_2}\myvec{1&\frac{b}{a}&\frac{x_1}{a}\\0&1&\frac{ax_2-cx_1}{ad-bc}}\\
-&\xleftrightarrow{R_1 = R_1-\frac{b}{a}R_2}\myvec{1&0&\frac{dx_1-bx_2}{ad-bc}\\0&1&\frac{ax_2-cx_1}{ad-bc}}
+\myvec{a&b&0\\c&d&0}&\xleftrightarrow{R_1 = \frac{1}{a}R_1}\myvec{1&\frac{b}{a}&0\\c&d&0}\\
+&\xleftrightarrow{R_2 = R_2-cR_1}\myvec{1&\frac{b}{a}&0\\0&\frac{ad-bc}{a}&0}\\
+&\xleftrightarrow{R_2=\frac{a}{ad-bc}R_2}\myvec{1&\frac{b}{a}&0\\0&1&0}\\
+&\xleftrightarrow{R_1 = R_1-\frac{b}{a}R_2}\myvec{1&0&0\\0&1&0}
 \end{align}
-Hence we get,
-\begin{align}
-\frac{dx_1-bx_2}{ad-bc}&=0\\
-\frac{ax_2-cx_1}{ad-bc}&=0
-\intertext{As $ad-bc\not=0$ hence,}
-dx_1-bx_2&=0\label{eq1}\\
-ax_2-cx_1&=0\label{eq2}
-\end{align}
-Solving \eqref{eq1} and \eqref{eq2} we get $x_1=0$ and $x_2=0$. Hence proved, the equation $\vec{AX}$=0 has only one trivial solution $x_1=x_2=0$
+From the reduced form of the augmented matrox we can see that it has only trivial solutions $x_1=x_2=0$. Hence proved, the equation $\vec{AX}$=0 has only one trivial solution $x_1=x_2=0$
 \subsection{Solution 3}
-Let, $a$ is the nonzero entry of $\vec{A}$. Given $ad-bc=0$, we can perform row reduction on $\vec{A}$ as follows,
+Let, $a$ is the nonzero entry of $\vec{A}$. Given $ad-bc=0$, we can perform row reduction on augmented matrix of equation $\vec{AX}=0$ as follows,
 \begin{align}
-\myvec{a&b\\c&d}&\xleftrightarrow{R_1 = \frac{1}{a}R_1}\myvec{1&\frac{b}{a}\\c&d}\\
-&\xleftrightarrow{R_2 = R_2-cR_1}\myvec{1&\frac{b}{a}\\0&0}\quad{\text{[$\because ad-bc=0$]}}\label{eq3}
+\myvec{a&b&0\\c&d&0}&\xleftrightarrow{R_1 = \frac{1}{a}R_1}\myvec{1&\frac{b}{a}&0\\c&d&0}\\
+&\xleftrightarrow{R_2 = R_2-cR_1}\myvec{1&\frac{b}{a}&0\\0&0&0}\quad{\text{[$\because ad-bc=0$]}}\label{eq3}
 \end{align}
 Hence from \eqref{eq3}, $\vec{AX}$ = 0 if and only if 
 \begin{align}
