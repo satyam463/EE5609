@@ -1,19 +1,11 @@
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
-%
+
 \usepackage{setspace}
 \usepackage{gensymb}
-\usepackage{siunitx}
-\usepackage{tkz-euclide} 
-\usepackage{textcomp}
-\usepackage{standalone}
-\usetikzlibrary{calc}
 
-%\doublespacing
 \singlespacing
 
-%\usepackage{graphicx}
-%\usepackage{amssymb}
-%\usepackage{relsize}
+
 \usepackage[cmex10]{amsmath}
 %\usepackage{amsthm}
 %\interdisplaylinepenalty=2500
@@ -37,9 +29,12 @@
 %\usepackage{algpseudocode}
 \usepackage{enumitem}
 \usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{refstyle}
+\usepackage{caption}
 \usepackage{steinmetz}
 \usepackage{tikz}
-\usepackage{circuitikz}
+%\usepackage{circuitikz}
 \usepackage{verbatim}
 \usepackage{tfrupee}
 \usepackage[breaklinks=true]{hyperref}
@@ -48,7 +43,7 @@
 %\usetkzobj{all}
 \usetikzlibrary{calc,math}
 \usepackage{listings}
-    \usepackage{color}                                            %%
+   \usepackage{color}                                            %%
     \usepackage{array}                                            %%
     \usepackage{longtable}                                        %%
     \usepackage{calc}                                             %%
@@ -57,10 +52,8 @@
     \usepackage{ifthen}                                           %%
   %optionally (for landscape tables embedded in another document): %%
     \usepackage{lscape}     
-\usepackage{multicol}
+%\usepackage{multicol}
 \usepackage{chngcntr}
-\usepackage{amsmath}
-\usepackage{cleveref}
 %\usepackage{enumerate}
 
 %\usepackage{wasysym}
@@ -85,17 +78,8 @@ frame=single,
 breaklines=true,
 columns=fullflexible
 }
-%\lstset{
-%language=tex,
-%frame=single, 
-%breaklines=true
-%}
-\usepackage{graphicx}
-\usepackage{pgfplots}
 
 \begin{document}
-%
-
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
@@ -104,10 +88,7 @@ columns=fullflexible
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
-%\newtheorem{thm}{Theorem}[section] 
-%\newtheorem{defn}[thm]{Definition}
-%\newtheorem{algorithm}{Algorithm}[section]
-%\newtheorem{cor}{Corollary}
+
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
@@ -128,15 +109,12 @@ columns=fullflexible
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-
-
-
-\providecommand{\abs}[1]{\left\vert#1\right\vert}
+%\providecommand{\abs}[1]{\left\vert#1\right\vert}
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
-%\providecommand{\norm}[1]{\lVert#1\rVert}
+%\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E\left[ #1 \right]}
+%\providecommand{\mean}[1]{E\left[ #1 \right]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
@@ -166,79 +144,43 @@ columns=fullflexible
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-\title{Matrix Theory (EE5609) Assignment 11}
-\author{Arkadipta De\\MTech Artificial Intelligence\\AI20MTECH14002}
-
+\title{Assignment-7}
+\author{Satyam Singh \\ EE20MTECH14015}
 \maketitle
 \newpage
-%\tableofcontents
 \bigskip
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-
 \begin{abstract}
-This document proves that, each field of the characteristic zero contains a copy of the rational number field.
+This assignment deals with subspace of vector field.
 \end{abstract}
-
-All the codes for the figure in this document can be found at
+Download  tex file from 
 \begin{lstlisting}
-https://github.com/Arko98/EE5609/blob/master/Assignment_11
+https://github.com/satyam463/Assignment-7/blob/master/assignment%207.tex
 \end{lstlisting}
-
-\section{\textbf{Problem}}
-Prove that, each field of the characteristic zero contains a copy of the rational number field.
-\section{\textbf{Solution}}
-The characteristic of a field is defined to be the smallest number of times one must use the field's multiplicative identity (1) in a sum to get the additive identity. If this sum never reaches the additive identity (0), then the field is said to have characteristic zero.\\
-Let $\mathbb{Q}$ be the rational number field. Hence,
-\begin{align}
-0 &\in \mathbb{Q} \qquad{\text{[Additive Identity]}}\\
-1 &\in \mathbb{Q}
-\qquad{\text{[Multiplicative Identity]}}
+\section{Problem Statement}
+ Verify that the set of complex numbers numbers described in the form of $x + y\sqrt{2}$ where x and y are rational is a sub-field of C.
+ \section{Solution}
+ Lets consider the subfield S = $x + y\sqrt{2}$  
+ We must verify that S meets the following two conditions:
+ \begin{align}
+     0 , 1 \in S\label{cond1} \\
+     If a,b \in S , a+b,-a,ab,a^{-1} \in S\label{cond2}
+ \end{align}
+ Throughout let 
+ \begin{align}
+ a=x+y\sqrt{2}, b=w+z\sqrt{2}
+ \end{align}
+ \begin{align}
+ if x=0 = y=0 \in Q , a=0+\sqrt{2}.0 = 0 , 0\in S\\ 
+ if x=1 , y=0 , a=1+\sqrt{2}.0 =1 , 1 \in S
+ \end{align}
+ Hence \refeq{cond1} is verfied .
+ \begin{align}
+ a+b = x+y\sqrt{2}+w+z\sqrt{2} = b+a\\
+ -a = -x-y\sqrt{2} , x,y\in Q so -x , -y \in Q , a \in S\\
+ ab=(x+y\sqrt{2})(w+z\sqrt{2})=ba , ab \in S\\
+ a^{-1} a = (x+y\sqrt{2})^{-1}(x+y\sqrt{2})=1, a^{-1} \in S
 \end{align}
-As addition is defined on $\mathbb{Q}$ hence we have, 
-\begin{align}
-1 &\not= 0\label{eq1}\\
-1+1 = 2 &\not= 0\label{eq2}
-\intertext{And so on,}
-1+1+\dots+1 = n &\not= 0\label{eq3}
-\end{align}
-From the definition of characteristic of a field and from \eqref{eq1}, \eqref{eq2} and so on up-to \eqref{eq3}, the rational number field, $\mathbb{Q}$ has characteristic 0.\\
-
-\begin{comment}
-Now, let $F$ be a field of characteristic 0. Hence we have,
-\begin{align}
-0 &\in F \qquad{\text{[Additive Identity]}}\\
-1 &\in F \qquad{\text{[Multiplicative Identity]}}
-\end{align}
-Since the characteristic of $F$ is zero hence,
-\begin{align}
-1 \not= 1+1 \not= 1+1+\dots \not= 0
-\end{align}
-As $F$ is a field, it is closed under addition. Hence for addition of $n$ number of 1 we have,
-\begin{align}
-1+1+\dots+1 = n \in F
-\end{align}
-And,
-\begin{align}
-n \not= 0
-\end{align}
-If $\mathbb{Z}$ is the set of integers then we have, 
-\begin{align}
-\mathbb{Z} \subseteq F
-\end{align}
-As $F$ is a field, every element in $F$ will have a multiplicative inverse, thus,
-\begin{align}
-\frac{1}{n} \in F
-\end{align}
-Also, $F$ is closed under multiplication and thus,
-\begin{align}
-\forall m,n \in \mathbb{Z} \quad{\text{and  }} n \not= 0\\
-m\cdot\frac{1}{n} \in F\\
-\implies \frac{m}{n} \in F
-\intertext{Hence, if $\mathbb{Q}$ is the rational number field then,}
-\mathbb{Q} \subseteq F
-\end{align}
-Hence, proved that field $F$ contains a copy of the rational number field.
-\end{comment}
-
-\end{document}
+Hence \refeq{cond2} is verfied .
+ \end{document}
